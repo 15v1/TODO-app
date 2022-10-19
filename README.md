@@ -1,3 +1,4 @@
 # TODO-app
-![Screenshot (110)](https://user-images.githubusercontent.com/68062657/196748985-cf1ba2ba-82c0-4744-a81c-d415e71cc822.png)
-![Screenshot (111)](https://user-images.githubusercontent.com/68062657/196749024-088c6f8f-a616-4328-a470-229852c862f7.png)
+for any help contact me on my twitter 
+![Screenshot_1666209838](https://user-images.githubusercontent.com/68062657/196793531-a6912fc8-0173-4606-bd2d-8f902e644cbe.png)
+![Screenshot_1666209821](https://user-images.githubusercontent.com/68062657/196793546-4bc98222-0f6c-478d-b0f8-275ed5734cf1.png)
