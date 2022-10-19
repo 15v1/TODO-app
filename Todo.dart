@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 void main() {
   runApp(Todo());
 }
@@ -8,11 +9,8 @@ class Todo extends StatefulWidget{
 }
 
 class _TodoState extends State<Todo> {
-  int i =0;
   TextEditingController tec=new TextEditingController();
-  String va='';
   List<String>tasks=[];
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,13 +18,17 @@ class _TodoState extends State<Todo> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: Text('ToDo Tasks'),centerTitle: true,),
+        
         body:PageView(
           children:[
-            ListView.builder(
+            
+            GridView.builder(
                itemCount: tasks.length,
+               
+               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,crossAxisSpacing: 5,mainAxisSpacing: 3),
                itemBuilder: ((context, index) {
                  return SizedBox(
-                  height: 50,width: 50,child: Card( color: Colors.white,child: Text("${tasks[index]}",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),),
+                  height: 20,width: 30,child: Card( color: Colors.primaries[Random().nextInt(Colors.primaries.length)],child: Text("${tasks[index]}",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),),
                  );
                }),
              ),
@@ -34,7 +36,7 @@ class _TodoState extends State<Todo> {
               
                child: Align(alignment: Alignment.bottomCenter,child:TextFormField(
                  controller: tec,
-               decoration: InputDecoration(
+               decoration: const InputDecoration(
                  hintText: 'Write Your Tasks'
                ),
                onEditingComplete: () {
@@ -55,6 +57,9 @@ class _TodoState extends State<Todo> {
     );
   }
 }
+
+
+
 
 
 
